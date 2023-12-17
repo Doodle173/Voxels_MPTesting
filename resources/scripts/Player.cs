@@ -1,4 +1,6 @@
-public class Player{
+using Godot;
+
+public partial class Player : CharacterBody3D{
 
     public string name;
     public int id;

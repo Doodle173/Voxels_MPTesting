@@ -115,7 +115,7 @@ public partial class MainMenu : Control
 			GD.Print("DBG> Player: " + i.name + "is playing.");
 		}
 
-		var scene = ResourceLoader.Load<PackedScene>("res://game.tscn").Instantiate<Node3D>();
+		var scene = ResourceLoader.Load<PackedScene>("res://game.tscn").Instantiate();
 		GetTree().Root.AddChild(scene);
 		this.Hide();
 	}

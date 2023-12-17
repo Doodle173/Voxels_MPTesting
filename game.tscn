@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://oln12hhuds6d"]
+[gd_scene load_steps=10 format=3 uid="uid://oln12hhuds6d"]
 
+[ext_resource type="Script" path="res://resources/scripts/SceneManager.cs" id="1_lpy7q"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="1_yyr3p"]
 
 [sub_resource type="Gradient" id="Gradient_ur0vy"]
@@ -31,17 +32,8 @@ tonemap_mode = 1
 ssao_enabled = true
 
 [node name="test_world" type="Node3D"]
-
-[node name="character" parent="." node_paths=PackedStringArray("HEAD", "CAMERA", "CAMERA_ANIMATION") instance=ExtResource("1_yyr3p")]
-HEAD = NodePath("Head")
-CAMERA = NodePath("Head/Camera")
-CAMERA_ANIMATION = NodePath("Head/camera_animation")
-JUMP = "jump"
-LEFT = "left"
-RIGHT = "right"
-FORWARD = "forward"
-BACKWARD = "backward"
-PAUSE = "pause"
+script = ExtResource("1_lpy7q")
+_player_template = ExtResource("1_yyr3p")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)

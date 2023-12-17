@@ -64,6 +64,12 @@ script = ExtResource("1_0t4e8")
 HEAD = NodePath("Head")
 CAMERA = NodePath("Head/Camera")
 CAMERA_ANIMATION = NodePath("Head/camera_animation")
+JUMP = "jump"
+LEFT = "left"
+RIGHT = "right"
+FORWARD = "forward"
+BACKWARD = "backward"
+PAUSE = "pause"
 CROUCH = "crouch"
 SPRINT = "sprint"
 
@@ -85,7 +91,7 @@ transform = Transform3D(0.999511, 0.000977888, -0.0312559, 0, 0.999511, 0.031271
 libraries = {
 "": SubResource("AnimationLibrary_o0unb")
 }
-blend_times = [&"RESET", &"RESET", 0.5, &"RESET", &"headbob", 0.5, &"headbob", &"RESET", 0.5]
+blend_times = [&"headbob", &"RESET", 0.5, &"RESET", &"headbob", 0.5, &"RESET", &"RESET", 0.5]
 
 [node name="UserInterface" type="Control" parent="."]
 layout_mode = 3
